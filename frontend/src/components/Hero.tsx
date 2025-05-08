@@ -40,7 +40,7 @@ const Hero = () => {
               Book a Table
             </a>
             <a href="#franchise" className="roadies-btn">
-              Join the Ride <ArrowRight className="inline ml-2" size={18} />
+              Get Franchise <ArrowRight className="inline ml-2" size={18} />
             </a>
           </div>
 
