@@ -16,7 +16,7 @@ const EventCard = ({ date, title, description, image }: { date: string; title: s
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
-      <a href="#" className="roadies-btn inline-block text-sm">
+      <a href="#contact" className="roadies-btn inline-block text-sm">
         Join Now
       </a>
     </div>

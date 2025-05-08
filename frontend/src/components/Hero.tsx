@@ -39,7 +39,7 @@ const Hero = () => {
             <a href="#contact" className="roadies-btn">
               Book a Table
             </a>
-            <a href="#events" className="roadies-btn">
+            <a href="#franchise" className="roadies-btn">
               Join the Ride <ArrowRight className="inline ml-2" size={18} />
             </a>
           </div>
