@@ -1,6 +1,4 @@
 
-import { Coffee, Bike, Heart } from 'lucide-react';
-
 const Footer = () => {
   return (
     <footer className="bg-black py-12 px-4">
@@ -75,9 +73,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Roadies Koffeehouz. All rights reserved.
           </p>
           <div className="flex items-center text-white/50 text-sm">
-            <span>Made with</span>
-            <Heart size={14} className="mx-1 text-roadies-gold" />
-            <span>for the road warriors</span>
+            <span>Designed and Developed by MDM Consulting</span>
           </div>
         </div>
       </div>
