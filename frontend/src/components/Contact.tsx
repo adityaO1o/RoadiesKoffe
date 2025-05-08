@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const ContactInfo = ({ icon, title, content }: { icon: JSX.Element; title: string; content: React.ReactNode }) => (
   <div className="flex items-start mb-6">
@@ -38,14 +39,15 @@ const Contact = () => {
     setLoading(true);
   
     try {
-      const res = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/send-email`,
+        formData,
+        {
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
   
-      const data = await res.json();
-      if (data.success) {
+      if (res.data.success) {
         toast({
           title: "Booking Request Sent!",
           description: "We'll contact you shortly to confirm.",
@@ -59,7 +61,7 @@ const Contact = () => {
           message: ''
         });
       } else {
-        throw new Error(data.message);
+        throw new Error(res.data.message);
       }
     } catch (error) {
       toast({
