@@ -52,7 +52,7 @@ const Franchise = () => {
   };
 
   return (
-    <section id="about" className="roadies-section bg-black px-4">
+    <section id="franchise" className="roadies-section bg-black px-4">
       <div className="container mx-auto">
         <h2 className="section-heading text-center">
           🏁 Join the Ride — Become a Roadies Koffeehouz Franchise Partner
