@@ -183,15 +183,23 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="time" className="text-white block mb-2">Time</label>
-                  <input 
-                    type="time" 
+                  <select
                     id="time"
                     name="time"
                     value={formData.time}
                     onChange={handleChange}
                     className="w-full px-4 py-2 bg-black/70 border border-white/30 text-white rounded-md focus:border-roadies-gold focus:outline-none"
                     required
-                  />
+                    >
+                      <option value="">Select</option>
+                      <option value="8 - 10 AM">8 - 10 AM</option>
+                      <option value="10 - 12 AM">10 - 12 AM</option>
+                      <option value="12 - 2 PM">12 - 2 PM</option>
+                      <option value="2 - 4 PM">2 - 4 PM</option>
+                      <option value="4 - 6 PM">4 - 6 PM</option>
+                      <option value="6 - 8 PM">6 - 8 PM</option>
+                      <option value="8 - 10 PM">8 - 10 PM</option>
+                    </select>
                 </div>
               </div>
               
