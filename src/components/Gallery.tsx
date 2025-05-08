@@ -25,6 +25,11 @@ const Gallery = () => {
       src:"/lovable-uploads/gal5.jpg", 
       alt: "Motorcycle on scenic road", 
       caption: "Roadies Koffe Houz" 
+    },
+    { 
+      src:"/lovable-uploads/gal6.jpg", 
+      alt: "Motorcycle on scenic road", 
+      caption: "Roadies Koffe Houz" 
     }
   ];
 

@@ -33,27 +33,44 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    try {
+      const res = await fetch('http://localhost:5000/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await res.json();
+      if (data.success) {
+        toast({
+          title: "Booking Request Sent!",
+          description: "We'll contact you shortly to confirm.",
+        });
+        setFormData({
+          name: '',
+          phone: '',
+          date: '',
+          time: '',
+          guests: '',
+          message: ''
+        });
+      } else {
+        throw new Error(data.message);
+      }
+    } catch (error) {
       toast({
-        title: "Booking Request Received!",
-        description: "We'll contact you shortly to confirm your reservation.",
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
       });
-      setLoading(false);
-      setFormData({
-        name: '',
-        phone: '',
-        date: '',
-        time: '',
-        guests: '',
-        message: ''
-      });
-    }, 1500);
+    }
+  
+    setLoading(false);
   };
+  
 
   return (
     <section id="contact" className="roadies-section bg-roadies-dark px-4">

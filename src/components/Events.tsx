@@ -17,7 +17,7 @@ const EventCard = ({ date, title, description, image }: { date: string; title: s
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
       <a href="#" className="roadies-btn inline-block text-sm">
-        Join the Ride
+        Join Now
       </a>
     </div>
   </div>
@@ -35,7 +35,7 @@ const Events = () => {
       date: "Every Friday",
       title: "Open Mic Nights",
       description: "Showcase your talent or enjoy performances from local artists in our cozy atmosphere with great coffee.",
-      image: "/lovable-uploads/73688fa3-5127-44be-a1ad-bda1ade05f3d.png"
+      image: "/lovable-uploads/gig.avif"
     },
     {
       date: "First Saturday",
@@ -47,7 +47,7 @@ const Events = () => {
       date: "Last Thursday",
       title: "Barista Showdowns",
       description: "Watch our skilled baristas compete in latte art and brewing techniques. Free tastings for all attendees!",
-      image: "/lovable-uploads/9ec18798-6e10-4206-a484-0c640d183cde.png"
+      image: "/lovable-uploads/brist.webp"
     }
   ];
 

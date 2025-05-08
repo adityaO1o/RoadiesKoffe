@@ -40,7 +40,7 @@ const InstagramPost = ({ imageUrl, likes, caption }: { imageUrl: string; likes: 
 const AboutUs = () => {
   const instagramPosts = [
     {
-      imageUrl: "/lovable-uploads/post2.jpg",
+      imageUrl: "/lovable-uploads/gal1.jpg",
       likes: 245,
       caption: "Our signature Mocha Crusher - the perfect fuel for your journey. #RoadiesKoffeehouz #CoffeeLover",
     },
@@ -50,7 +50,7 @@ const AboutUs = () => {
       caption: "Weekend hangouts with the crew. Perfect spot for bikers and hustlers. #RoadiesKoffeehouz #WeekendVibes"
     },
     {
-      imageUrl: "/lovable-uploads/post3.jpg",
+      imageUrl: "/lovable-uploads/gal3.jpg",
       likes: 178,
       caption: "Morning vibes at Roadies. Come fuel up before your ride! #RoadiesKoffeehouz #MorningRitual",
     }
@@ -89,10 +89,6 @@ const AboutUs = () => {
               </li>
             </ul>
           </div>
-          
-          <p className="text-white/80 mb-6 text-center">
-            From early morning espresso shots to late-night gigs, Roadies Koffeehouz is where your next idea, ride, or friendship begins.
-          </p>
           
           <p className="text-roadies-gold italic text-center text-xl mb-10">
             "So park your bike, plug in your charger, and pour yourself into the vibe — you're home now."
